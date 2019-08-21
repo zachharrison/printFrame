@@ -4,11 +4,11 @@ const printInFrame = function(list) {
   const border = repeat('*', longest);
 
   console.log(border);
-  for (word of list) {
+  for (const word of list) {
     console.log(`* ${word}${repeat(' ', longest - word.length + 1)}*`);
   }
   console.log(border);
-}
+};
 
 const repeat = function(str, times) {
   let result = str;
@@ -18,17 +18,17 @@ const repeat = function(str, times) {
   }
 
   return result;
-}
+};
 
 const longestStr = function(list) {
   let longest = list[0];
 
-  for (str of list) {
+  for (const str of list) {
     longest = str;
   }
 
   return longest;
-}
+};
 
 // Test driver code, do not modify
 printInFrame('May the force be with you');
